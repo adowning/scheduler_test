@@ -1,0 +1,43 @@
+@(user: User)
+<html>
+    <head>
+		<script type="text/javascript" src="@routes.Assets.at("javascripts/dhtmlxscheduler.js")"></script>
+        <link rel="stylesheet" type="text/css" media="screen" href="@routes.Assets.at("stylesheets/login.css")">
+                <link rel="stylesheet" type="text/css" media="screen" href="@routes.Assets.at("stylesheets/libs/dhtmlxscheduler_glossy.css")">
+
+<script type="text/javascript" src="@routes.Assets.at("javascripts/scheduler.js")"></script>
+	
+</head>
+
+
+    <body>
+    <header>
+            <a href="@routes.Projects.index" id="logo"><span>Zen</span>tasks</a>
+            <dl id="user">
+                <dt>@user.name <span>(@user.email)</span></dt>
+                <dd>
+                    <a href="@routes.Application.logout()">Logout</a>
+                </dd>
+            </dl>
+    </header>
+
+	<div id="scheduler_here" class="dhx_cal_container" style='width:100%; height:100%;'>
+		<div class="dhx_cal_navline">
+			<div class="dhx_cal_prev_button">&nbsp;</div>
+			<div class="dhx_cal_next_button">&nbsp;</div>
+			<div class="dhx_cal_today_button"></div>
+			<div class="dhx_cal_date"></div>
+			<div class="dhx_cal_tab" name="day_tab" style="right:204px;"></div>
+			<div class="dhx_cal_tab" name="week_tab" style="right:140px;"></div>
+			<div class="dhx_cal_tab" name="month_tab" style="right:76px;"></div>
+		</div>
+		<div class="dhx_cal_header">
+		</div>
+		<div class="dhx_cal_data">
+		</div>		
+	</div>
+	</body>
+
+    
+</html>
+
